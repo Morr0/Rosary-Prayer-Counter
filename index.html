@@ -5,14 +5,70 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>Rosary Timer</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+    <style>
+        body {
+            background-color: #8f8c8c;
+
+            font-size: xx-large;
+            font-family: cursive;
+        }
+
+        .container {
+            border: #8f8c8c 2px solid;
+            border-radius: 8%;
+
+            display: flex;
+            flex-direction: column;
+            justify-items: center;
+            justify-content: center;
+            text-align: center;
+            background-color: red;
+            padding: 1rem;
+
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            
+            justify-content: space-evenly;
+            width: 32rem;
+            max-width: 32rem;
+            min-width: 32rem;
+        }
+
+        .item {
+            display: flex;
+            justify-content: space-evenly;
+            flex-direction: row;
+            flex: content;
+            margin-bottom: 1rem;
+        }
+
+        button {
+            background-color: white;
+            border: 0;
+            border-radius: 10%;
+            padding: 0.5rem;
+            width: auto;
+            font-size: larger;
+        }
+
+        button:enabled:hover {
+            background-color: gainsboro;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
     <div class="container">
-        <div id="info">
+        <div id="info" class="item">
             Press Start to begin the rosary
         </div>
-        <button id="next" disabled type="button">Next</button>
-        <button id="startStop" type="button">Start</button>
+        <div class="item">
+            <button id="next" disabled type="button">Next</button>
+            <button id="startStop" type="button">Start</button>
+        </div>
     </div>
     <!-- JS -->
     <script>
